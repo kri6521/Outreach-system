@@ -39,4 +39,4 @@ This is a cold outreach automation system designed to scrape UAE-based textile c
 ---
 
 ## 📌 Google sheet link
-- https://docs.google.com/spreadsheets/d/e/2PACX-1vR1oh2rL0KzDbM80m4k7_Bx0kxLlPk7-G6AoCOwOgNpehyWnzad0ZvvCqN3Jf2X1D_P76pnVntUG9vz/pubhtml
+- [link here](https://docs.google.com/spreadsheets/d/e/2PACX-1vR1oh2rL0KzDbM80m4k7_Bx0kxLlPk7-G6AoCOwOgNpehyWnzad0ZvvCqN3Jf2X1D_P76pnVntUG9vz/pubhtml)
