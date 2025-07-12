@@ -11,7 +11,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 load_dotenv()
 
-# ── Configure your tools ────────────────────────────────────────────────────────
+# ── Configure your tools ───────
 
 # Search (will pull top 5 results)
 search = SerpAPIWrapper(
@@ -19,7 +19,7 @@ search = SerpAPIWrapper(
     params={"num_results": 5, "engine": "google"},
 )
 
-# LLM (Mixtral via Groq)
+# LLM 
 llm = ChatGroq(
     temperature=0,
     groq_api_key=os.getenv("GROQ_API_KEY"),
@@ -32,8 +32,8 @@ def init_sheet():
     creds = ServiceAccountCredentials.from_json_keyfile_name(
         os.getenv("GOOGLE_APPLICATION_CREDENTIALS"),
         [
-            "https://spreadsheets.google.com/feeds ",  # Fixed: Removed trailing space
-            "https://www.googleapis.com/auth/drive ",  # Fixed: Removed trailing space
+            "https://spreadsheets.google.com/feeds ",  
+            "https://www.googleapis.com/auth/drive ",  
         ],
     )
     sheet = gspread.authorize(creds).open_by_key(os.getenv("SHEET_ID")).sheet1
@@ -42,7 +42,7 @@ def init_sheet():
     return sheet
 
 
-# ── Pipeline steps ─────────────────────────────────────────────────────────────
+# ── Pipeline steps ─────────
 
 
 def scrape_uae_textile_companies():
@@ -60,7 +60,7 @@ def scrape_uae_textile_companies():
         raise RuntimeError("No search results—check your SERPAPI_API_KEY or quota.")
 
     companies = []
-    for item in results[:5]:  # Safe slice now that we know it's a list
+    for item in results[:5]:  
         url = item.get("link")
         if not url:
             continue
