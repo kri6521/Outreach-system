@@ -1,0 +1,7 @@
+python-dotenv
+langchain-community
+langchain-groq
+gspread
+oauth2client
+tldextract
+google-search-results
